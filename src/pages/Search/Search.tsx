@@ -26,10 +26,14 @@ function queryPokemonByName(name: string): Promise<Pokemon> {
         name: item.stat.name,
         value: item.base_stat < 100 ? item.base_stat : 100,
       }));
+
+      const types = response.types.map((item) => item.type.name);
+
       const pokemon: Pokemon = {
         name: response.name,
         image: response.sprites.other["official-artwork"].front_default,
         stats,
+        types,
       };
 
       return pokemon;
@@ -84,7 +88,7 @@ const SearchResult = ({ location }: RouteComponentProps) => {
         </Container>
         <Divider />
       </Stack>
-      <Box display="flex" height="100%" py={8} sx={{ background: "#f9f9f9" }}>
+      <Box display="flex" height="100%" py={8}>
         <Container>
           <SearchDisplay pokemon={data} error={error} />
         </Container>

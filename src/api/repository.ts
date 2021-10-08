@@ -1,4 +1,5 @@
 import axios from "axios";
+import { PokemonType } from "theme";
 import PokemonAPI from ".";
 
 const BASE_URL = `${PokemonAPI.baseUrl}/pokemon`;
@@ -17,6 +18,13 @@ interface FetchPokemonByNameResponse {
       base_stat: number;
       stat: {
         name: string;
+      };
+    }
+  ];
+  types: [
+    {
+      type: {
+        name: PokemonType;
       };
     }
   ];
