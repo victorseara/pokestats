@@ -1,5 +1,4 @@
 import PageLayout from "components/PageLayout/PageLayout";
-import React from "react";
 import { RouteComponentProps } from "react-router";
 import PokemonSearch from "./components/PokemonSearch/PokemonSearch";
 

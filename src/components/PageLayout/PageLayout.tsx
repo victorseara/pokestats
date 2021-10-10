@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Stack } from "@mui/material";
+import { Container, Divider, Stack } from "@mui/material";
 import Header from "components/Header/Header";
 
 interface PageLayoutProps {
@@ -6,14 +6,14 @@ interface PageLayoutProps {
 }
 const PageLayout = ({ children }: PageLayoutProps) => {
   return (
-    <Stack spacing={4} height="100%">
-      <Stack spacing={4} pt={4}>
+    <Stack spacing={{ xs: 0, md: 4 }} height="100%">
+      <Stack spacing={4} mt={4}>
         <Header />
         <Divider />
       </Stack>
-      <Box height="100%">
+      <Stack height="100%">
         <Container sx={{ height: "100%" }}>{children}</Container>
-      </Box>
+      </Stack>
     </Stack>
   );
 };
