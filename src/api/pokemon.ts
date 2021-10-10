@@ -1,14 +1,25 @@
 import { PokemonType } from "theme";
 
-interface Stats {
-  name: string;
+export type StatName =
+  | "hp"
+  | "attack"
+  | "defense"
+  | "special-attack"
+  | "special-defense"
+  | "speed";
+
+interface Stat {
+  name: StatName;
   value: number;
+  description: string;
 }
+
 interface Pokemon {
   name: string;
   image: string;
-  stats: Stats[];
+  stats: Stat[];
   types: PokemonType[];
+  overall: number;
 }
 
 export default Pokemon;

@@ -44,8 +44,8 @@ const SearchDisplay = ({ pokemon }: SearchDisplayProps) => {
           <Stack spacing={2}>
             {pokemon.stats.map((item) => (
               <StatDisplay
-                key={JSON.stringify(item)}
-                name={item.name}
+                key={item.name}
+                name={item.description}
                 value={item.value}
               />
             ))}

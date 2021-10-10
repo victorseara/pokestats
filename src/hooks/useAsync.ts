@@ -30,7 +30,7 @@ const asyncReducer =
   };
 
 function useAsync<T>(
-  asyncCallback: () => Promise<T> | null,
+  asyncCallback: () => Promise<T>,
   initialState: Partial<State<T>>,
   dependencies: any
 ) {
