@@ -3,6 +3,7 @@ import Pokemon from "api/pokemon";
 import PokemonRepository from "api/repository";
 import SearchDisplay from "components/SearchDisplay/SearchDisplay";
 import SearchForm from "components/SearchForm/SearchForm";
+import useAsync from "hooks/useAsync";
 import React from "react";
 import { RouteComponentProps } from "react-router";
 /* import response from "testUtils/data/fetchPokemonByName.json"; */
@@ -43,39 +44,19 @@ function queryPokemonByName(name: string): Promise<Pokemon> {
     });
 }
 
-interface SearchResultState {
-  status: "idle" | "pending" | "rejected" | "resolved";
-  data: Pokemon | null;
-  error: string | null;
-}
-
 const SearchResult = ({ location }: RouteComponentProps) => {
-  const [state, setState] = React.useState<SearchResultState>({
-    status: "idle",
-    data: null,
-    error: null,
-  });
-
   const query = location.pathname.replace("/", "");
 
-  React.useEffect(() => {
-    if (query) {
-      setState((prev) => ({ ...prev, status: "pending" }));
-      const promise = queryPokemonByName(query);
-
-      promise
-        .then((data) => setState({ data, error: null, status: "resolved" }))
-        .catch((error) =>
-          setState((prev) => ({
-            ...prev,
-            status: "rejected",
-            error: error.message,
-          }))
-        );
-    }
-  }, [query]);
-
-  const { data, error, status } = state;
+  const { data, status, error } = useAsync<Pokemon>(
+    () => {
+      if (!query) {
+        return null;
+      }
+      return queryPokemonByName(query);
+    },
+    { status: query ? "pending" : "idle" },
+    query
+  );
 
   return (
     <Box height="100%">
