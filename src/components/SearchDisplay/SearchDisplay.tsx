@@ -6,19 +6,10 @@ import StatDisplay from "components/StatDisplay/StatDisplay";
 import Img from "react-cool-img";
 
 interface SearchDisplayProps {
-  pokemon: Pokemon | null;
-  error: string | null;
+  pokemon: Pokemon;
 }
 
-const SearchDisplay = ({ pokemon, error }: SearchDisplayProps) => {
-  if (error) {
-    return <Box>{error}</Box>;
-  }
-
-  if (!pokemon) {
-    return null;
-  }
-
+const SearchDisplay = ({ pokemon }: SearchDisplayProps) => {
   const overall =
     pokemon.stats.reduce((acc, curr) => (acc += curr.value), 0) /
     pokemon.stats.length;

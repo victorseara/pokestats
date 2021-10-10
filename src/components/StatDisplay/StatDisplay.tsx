@@ -12,29 +12,13 @@ interface StatDisplayProps {
   value: number;
 }
 const StatDisplay = ({ name, value }: StatDisplayProps) => {
-  const [state, setState] = React.useState(0);
-
-  React.useEffect(() => {
-    let timeout: NodeJS.Timeout;
-
-    if (state < value) {
-      timeout = setTimeout(() => {
-        setState((prev) => prev + 1);
-      }, 5);
-    }
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [state, value]);
-
   return (
     <Box>
       <Box display="flex" justifyContent="space-between" alignItems="baseline">
         <StatText variant="overline">{name}</StatText>
         <StatText variant="overline">{value}</StatText>
       </Box>
-      <StatBar value={state} variant="determinate" />
+      <StatBar value={value} variant="determinate" />
     </Box>
   );
 };
