@@ -62,13 +62,6 @@ function getRandomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-interface VariantProps {
-  onSubmit: (e: FormEvent) => void;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  randomize?: () => void;
-}
-
 const StyledInput = styled(OutlinedInput)(({ theme }) => ({
   borderRadius: 24,
   paddingLeft: 12,
