@@ -1,6 +1,6 @@
 import { Chip } from "@mui/material";
+import pokemonTheme, { PokemonType } from "pokemonTypeColors";
 import React from "react";
-import pokemonTheme, { PokemonType } from "theme";
 
 interface PokemonTypeChipProps {
   type: PokemonType;
@@ -13,12 +13,7 @@ const PokemonTypeChip = ({ type }: PokemonTypeChipProps) => {
     return null;
   }
 
-  return (
-    <Chip
-      label={pokemonType.display}
-      sx={{ backgroundColor: pokemonType.primaryColor }}
-    />
-  );
+  return <Chip label={pokemonType.display} color="primary" />;
 };
 
 export default PokemonTypeChip;

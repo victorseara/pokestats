@@ -17,7 +17,7 @@ const StatDisplay = ({ name, value }: StatDisplayProps) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setState((prev) => {
-        if (prev < value) {
+        if (prev < value && prev <= 100) {
           return prev + 1;
         }
 
@@ -36,7 +36,7 @@ const StatDisplay = ({ name, value }: StatDisplayProps) => {
         <StatText variant="overline">{name}</StatText>
         <StatText variant="overline">{value}</StatText>
       </Box>
-      <StatBar value={value <= 100 ? state : 100} variant="determinate" />
+      <StatBar value={state} variant="determinate" />
     </Box>
   );
 };
@@ -50,7 +50,7 @@ const StatBar = styled(LinearProgress)(({ theme }) => ({
   height: 16,
   borderRadius: 24,
   boxShadow: `-4px 8px 8px rgba(0,0,0,0.05)`,
-  backgroundColor: theme.palette.grey[200],
+  backgroundColor: theme.palette.divider,
 
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 24,

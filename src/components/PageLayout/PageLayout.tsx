@@ -7,11 +7,11 @@ interface PageLayoutProps {
 const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <Stack spacing={{ xs: 0, md: 4 }} height="100%">
-      <Stack spacing={4} mt={4}>
+      <Stack spacing={4} mt={4} component="header">
         <Header />
         <Divider />
       </Stack>
-      <Stack height="100%">
+      <Stack height="100%" component="main">
         <Container sx={{ height: "100%" }}>{children}</Container>
       </Stack>
     </Stack>

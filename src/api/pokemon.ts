@@ -1,4 +1,4 @@
-import { PokemonType } from "theme";
+import { PokemonType } from "pokemonTypeColors";
 
 export type StatName =
   | "hp"

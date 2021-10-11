@@ -1,4 +1,4 @@
-import { SearchOutlined } from "@mui/icons-material";
+import { ChangeCircle, SearchOutlined } from "@mui/icons-material";
 import {
   Button,
   OutlinedInput,
@@ -49,7 +49,9 @@ const SearchForm = ({ initialPokemonName = "" }: SearchFormProps) => {
         />
         <Stack direction="row" spacing={5} justifyContent="center">
           <Button type="submit">Search Pokemon</Button>
-          <Button onClick={randomize}>Randomize</Button>
+          <Button startIcon={<ChangeCircle />} onClick={randomize}>
+            Random
+          </Button>
         </Stack>
       </Stack>
     </Stack>

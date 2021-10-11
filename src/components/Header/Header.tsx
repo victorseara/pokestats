@@ -1,16 +1,18 @@
-import { SearchOutlined } from "@mui/icons-material";
-import { Container, Stack } from "@mui/material";
+import { Brightness5, SearchOutlined } from "@mui/icons-material";
+import { Container, IconButton, Stack } from "@mui/material";
 import Brand from "components/Brand/Brand";
 import SearchInput from "components/SearchInput/SearchInput";
 import React, { FormEvent } from "react";
 import { useHistory, useLocation } from "react-router";
+import { useThemeProvider } from "theme/ThemeProvider";
 
 const Header = () => {
   const history = useHistory();
   const { pathname } = useLocation();
-  const initialPokemonName = pathname.replace("/", "");
+  const query = pathname.replace("/", "");
+  const { toggleColorMode } = useThemeProvider();
 
-  const [pokemonName, setPokemonName] = React.useState(initialPokemonName);
+  const [pokemonName, setPokemonName] = React.useState(query);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPokemonName(event.target.value);
@@ -21,6 +23,13 @@ const Header = () => {
     history.push(pokemonName);
   };
 
+  React.useEffect(() => {
+    if (pokemonName !== query) {
+      setPokemonName(query);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
+
   return (
     <Container>
       <Stack
@@ -30,7 +39,7 @@ const Header = () => {
         alignItems="center"
         spacing={4}
       >
-        <Brand fontSize="3vmin" />
+        <Brand fontSize="4vmin" />
         <SearchInput
           name="pokemonName"
           size="small"
@@ -40,6 +49,9 @@ const Header = () => {
           fullWidth
           sx={{ maxHeight: "44px" }}
         />
+        <IconButton title="Change theme" onClick={toggleColorMode}>
+          <Brightness5 />
+        </IconButton>
       </Stack>
     </Container>
   );

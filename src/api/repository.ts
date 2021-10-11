@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PokemonType } from "theme";
+import { PokemonType } from "pokemonTypeColors";
 import PokemonAPI from ".";
 import { StatName } from "./pokemon";
 

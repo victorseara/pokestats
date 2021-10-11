@@ -4,7 +4,7 @@ import SearchForm from "components/SearchForm/SearchForm";
 const Home = () => {
   return (
     <Container>
-      <Stack width="60%" spacing={2} alignItems="center">
+      <Stack width={{ xs: "100%", md: "60%" }} spacing={2} alignItems="center">
         <SearchForm />
       </Stack>
     </Container>

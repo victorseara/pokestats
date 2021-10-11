@@ -20,7 +20,7 @@ const Logo = ({ fontSize }: LogoProps) => (
   <Stack direction="row">
     <Typography
       component="span"
-      fontWeight="fontWeightMedium"
+      fontWeight="fontWeightBold"
       fontSize={fontSize}
       color="primary"
     >
