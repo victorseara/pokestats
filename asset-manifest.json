@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/pokestats/static/js/main.860baed4.chunk.js",
-    "main.js.map": "/pokestats/static/js/main.860baed4.chunk.js.map",
+    "main.js": "/pokestats/static/js/main.ca518fd0.chunk.js",
+    "main.js.map": "/pokestats/static/js/main.ca518fd0.chunk.js.map",
     "runtime-main.js": "/pokestats/static/js/runtime-main.2756294a.js",
     "runtime-main.js.map": "/pokestats/static/js/runtime-main.2756294a.js.map",
-    "static/js/2.8e8faffa.chunk.js": "/pokestats/static/js/2.8e8faffa.chunk.js",
-    "static/js/2.8e8faffa.chunk.js.map": "/pokestats/static/js/2.8e8faffa.chunk.js.map",
+    "static/js/2.dac91f90.chunk.js": "/pokestats/static/js/2.dac91f90.chunk.js",
+    "static/js/2.dac91f90.chunk.js.map": "/pokestats/static/js/2.dac91f90.chunk.js.map",
     "static/js/3.7d674bd5.chunk.js": "/pokestats/static/js/3.7d674bd5.chunk.js",
     "static/js/3.7d674bd5.chunk.js.map": "/pokestats/static/js/3.7d674bd5.chunk.js.map",
     "index.html": "/pokestats/index.html",
-    "static/js/2.8e8faffa.chunk.js.LICENSE.txt": "/pokestats/static/js/2.8e8faffa.chunk.js.LICENSE.txt"
+    "static/js/2.dac91f90.chunk.js.LICENSE.txt": "/pokestats/static/js/2.dac91f90.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2756294a.js",
-    "static/js/2.8e8faffa.chunk.js",
-    "static/js/main.860baed4.chunk.js"
+    "static/js/2.dac91f90.chunk.js",
+    "static/js/main.ca518fd0.chunk.js"
   ]
 }
