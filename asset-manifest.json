@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/pokestats/static/js/main.ca518fd0.chunk.js",
-    "main.js.map": "/pokestats/static/js/main.ca518fd0.chunk.js.map",
+    "main.js": "/pokestats/static/js/main.df6566c4.chunk.js",
+    "main.js.map": "/pokestats/static/js/main.df6566c4.chunk.js.map",
     "runtime-main.js": "/pokestats/static/js/runtime-main.2756294a.js",
     "runtime-main.js.map": "/pokestats/static/js/runtime-main.2756294a.js.map",
     "static/js/2.dac91f90.chunk.js": "/pokestats/static/js/2.dac91f90.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.2756294a.js",
     "static/js/2.dac91f90.chunk.js",
-    "static/js/main.ca518fd0.chunk.js"
+    "static/js/main.df6566c4.chunk.js"
   ]
 }
