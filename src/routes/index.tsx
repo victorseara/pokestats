@@ -1,6 +1,6 @@
 import Home from "pages/Home/Home";
 import SearchResult from "pages/Search/Search";
-import { BrowserRouter, Route, RouteProps, Switch } from "react-router-dom";
+import { HashRouter, Route, RouteProps, Switch } from "react-router-dom";
 
 const routes: RouteProps[] = [
   { path: "/", exact: true, component: Home },
@@ -9,13 +9,13 @@ const routes: RouteProps[] = [
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         {routes.map((route) => (
           <Route {...route} key={JSON.stringify(route)} />
         ))}
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
