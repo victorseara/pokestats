@@ -12,32 +12,28 @@ const statIcon = {
 };
 
 function queryPokemonByName(pokemonName: string) {
-  return PokemonRepository.fetchPokemonByName(pokemonName)
-    .then((response) => {
-      const stats = response.stats.map((item) => ({
-        name: item.stat.name,
-        value: item.base_stat,
-        description: `${statIcon[item.stat.name]} ${item.stat.name}`,
-      }));
+  return PokemonRepository.fetchPokemonByName(pokemonName).then((response) => {
+    const stats = response.stats.map((item) => ({
+      name: item.stat.name,
+      value: item.base_stat,
+      description: `${statIcon[item.stat.name]} ${item.stat.name}`,
+    }));
 
-      const types = response.types.map((item) => item.type.name);
+    const types = response.types.map((item) => item.type.name);
 
-      const overall =
-        stats.reduce((acc, curr) => (acc += curr.value), 0) / stats.length;
+    const overall =
+      stats.reduce((acc, curr) => (acc += curr.value), 0) / stats.length;
 
-      const pokemon: Pokemon = {
-        name: response.name,
-        image: response.sprites.other["official-artwork"].front_default,
-        stats,
-        types,
-        overall,
-      };
+    const pokemon: Pokemon = {
+      name: response.name,
+      image: response.sprites.other["official-artwork"].front_default,
+      stats,
+      types,
+      overall,
+    };
 
-      return pokemon;
-    })
-    .catch(() => {
-      throw new Error(`Não econtramos um pokemon chamado ${pokemonName}`);
-    });
+    return pokemon;
+  });
 }
 
 function usePokemon(pokemonName: string) {
