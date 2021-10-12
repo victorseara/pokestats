@@ -2,6 +2,7 @@ import { ChangeCircle } from "@mui/icons-material";
 import { IconButton, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Pokemon from "api/pokemon";
+import notFound from "assets/img/notfound.png";
 import PokemonTypeChip from "components/PokemonTypeChip/PokemonTypeChip";
 import StatDisplay from "components/StatDisplay/StatDisplay";
 import Img from "react-cool-img";
@@ -78,13 +79,19 @@ const PokemonDisplay = ({ pokemon }: PokemonDisplayProps) => {
           alignItems="center"
           py={{ xs: 8 }}
         >
-          <Img src={pokemon.image} alt={pokemon.name} height={400} />
+          <Img
+            src={pokemon.image}
+            alt={pokemon.name}
+            height={400}
+            placeholder={notFound}
+            error={notFound}
+          />
         </Box>
         <Stack
           direction="row"
           spacing={1}
           position="absolute"
-          bottom={0}
+          bottom={24}
           right={0}
         >
           {pokemon.types.map((item) => (
