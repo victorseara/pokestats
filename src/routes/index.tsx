@@ -9,7 +9,7 @@ const routes: RouteProps[] = [
 
 const Routes = () => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Switch>
         {routes.map((route) => (
           <Route {...route} key={JSON.stringify(route)} />
