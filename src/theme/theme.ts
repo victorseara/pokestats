@@ -43,7 +43,7 @@ const themes = {
   },
   ghost: {
     primary: {
-      main: colors.grey[200],
+      main: colors.lime[500],
     },
   },
   steel: {
@@ -78,12 +78,12 @@ const themes = {
   },
   ice: {
     primary: {
-      main: colors.blueGrey[200],
+      main: colors.cyan[200],
     },
   },
   dragon: {
     primary: {
-      main: colors.deepOrange[500],
+      main: colors.amber[500],
     },
   },
   fairy: {
