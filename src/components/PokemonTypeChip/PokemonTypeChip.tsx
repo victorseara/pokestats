@@ -1,19 +1,28 @@
-import { Chip } from "@mui/material";
-import pokemonTheme, { PokemonType } from "pokemonTypeColors";
-import React from "react";
+import { Chip, useTheme } from "@mui/material";
+import { PokemonType } from "api";
+import colors from "theme/theme";
+import { getPokemonTypeDisplay } from "./pokemonTypes";
 
 interface PokemonTypeChipProps {
   type: PokemonType;
 }
 
 const PokemonTypeChip = ({ type }: PokemonTypeChipProps) => {
-  const pokemonType = pokemonTheme.find((item) => item.name === type);
+  const theme = useTheme();
+  const color = colors[type];
+  const pokemonType = getPokemonTypeDisplay(type);
 
-  if (!pokemonType) {
-    return null;
-  }
-
-  return <Chip label={pokemonType.display} color="primary" />;
+  return (
+    <Chip
+      label={pokemonType || type}
+      sx={{
+        backgroundColor: color ? color.primary.main : "primary",
+        color: color
+          ? theme.palette.getContrastText(color.primary.main)
+          : "textPrimary",
+      }}
+    />
+  );
 };
 
 export default PokemonTypeChip;
