@@ -1,4 +1,4 @@
-import { PokemonType } from "pokemonTypeColors";
+import { PokemonType } from "api";
 
 interface PokemonTheme {
   name: PokemonType;
