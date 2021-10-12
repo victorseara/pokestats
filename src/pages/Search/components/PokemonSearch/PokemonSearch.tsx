@@ -1,4 +1,4 @@
-import { Box, CircularProgress } from "@mui/material";
+import Loader from "components/Loader/Loader";
 import usePokemon from "hooks/usePokemon";
 import React from "react";
 import { useThemeProvider } from "theme/ThemeProvider";
@@ -25,16 +25,7 @@ const PokemonSearch = ({ pokemonName }: PokemonSearchProps) => {
   }
 
   if (status === "pending" || !pokemon) {
-    return (
-      <Box
-        display="flex"
-        height="100%"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <CircularProgress />
-      </Box>
-    );
+    return <Loader />;
   }
 
   return <PokemonDisplay pokemon={pokemon} />;
