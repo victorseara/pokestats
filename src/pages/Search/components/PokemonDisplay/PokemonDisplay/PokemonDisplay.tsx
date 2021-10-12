@@ -1,7 +1,7 @@
 import { ChangeCircle } from "@mui/icons-material";
 import { IconButton, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Pokemon from "api/pokemon";
+import { Pokemon } from "api";
 import notFound from "assets/img/notfound.png";
 import PokemonTypeChip from "components/PokemonTypeChip/PokemonTypeChip";
 import StatDisplay from "components/StatDisplay/StatDisplay";

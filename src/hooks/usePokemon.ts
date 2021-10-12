@@ -1,5 +1,4 @@
-import Pokemon from "api/pokemon";
-import PokemonRepository from "api/repository";
+import { Pokemon, PokemonRepository } from "api";
 import useAsync from "./useAsync";
 
 const statIcon = {
