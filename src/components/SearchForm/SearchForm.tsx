@@ -39,6 +39,7 @@ const SearchForm = ({ initialPokemonName = "" }: SearchFormProps) => {
       <Brand />
       <Stack spacing={5} width="100%" component="form" onSubmit={onSubmit}>
         <StyledInput
+          placeholder="Search pokemon by name or id"
           name="pokemonName"
           value={pokemonName}
           onChange={onChange}
