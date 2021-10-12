@@ -4,7 +4,7 @@ import {
   ThemeProvider as MuiThemeProvider,
   useMediaQuery,
 } from "@mui/material";
-import { PokemonType } from "pokemonTypeColors";
+import { PokemonType } from "api";
 import React from "react";
 import themes from "./theme";
 
