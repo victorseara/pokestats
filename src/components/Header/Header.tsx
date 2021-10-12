@@ -42,6 +42,7 @@ const Header = () => {
         <Brand fontSize="4vmin" />
         <SearchInput
           name="pokemonName"
+          placeholder="Search pokemon by name or id"
           size="small"
           endAdornment={<SearchOutlined />}
           value={pokemonName}
