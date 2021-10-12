@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { PokemonType } from "pokemonTypeColors";
 import PokemonAPI from ".";
 import { StatName } from "./pokemon";
@@ -36,9 +36,14 @@ class PokemonRepository {
     name: string
   ): Promise<FetchPokemonByNameResponse> {
     return axios
-      .get<FetchPokemonByNameResponse>(`${BASE_URL}/${name}`)
+      .get<FetchPokemonByNameResponse>(`${BASE_URL}/${name.toLowerCase()}`)
       .then((response) => response.data)
-      .catch((error) => {
+      .catch((error: AxiosError) => {
+        if (error.response?.status === 404) {
+          error.message = `There is no Pokemon called ${name}`;
+          throw error;
+        }
+
         throw error;
       });
   }
