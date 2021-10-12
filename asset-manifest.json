@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.js": "/pokestats/static/js/main.7eeecad9.chunk.js",
-    "main.js.map": "/pokestats/static/js/main.7eeecad9.chunk.js.map",
-    "runtime-main.js": "/pokestats/static/js/runtime-main.8eba34e8.js",
-    "runtime-main.js.map": "/pokestats/static/js/runtime-main.8eba34e8.js.map",
-    "static/js/2.b571e677.chunk.js": "/pokestats/static/js/2.b571e677.chunk.js",
-    "static/js/2.b571e677.chunk.js.map": "/pokestats/static/js/2.b571e677.chunk.js.map",
-    "static/js/3.ab01eafe.chunk.js": "/pokestats/static/js/3.ab01eafe.chunk.js",
-    "static/js/3.ab01eafe.chunk.js.map": "/pokestats/static/js/3.ab01eafe.chunk.js.map",
+    "main.js": "/pokestats/static/js/main.e2d2119e.chunk.js",
+    "main.js.map": "/pokestats/static/js/main.e2d2119e.chunk.js.map",
+    "runtime-main.js": "/pokestats/static/js/runtime-main.d1d5a37c.js",
+    "runtime-main.js.map": "/pokestats/static/js/runtime-main.d1d5a37c.js.map",
+    "static/js/2.f87e5622.chunk.js": "/pokestats/static/js/2.f87e5622.chunk.js",
+    "static/js/2.f87e5622.chunk.js.map": "/pokestats/static/js/2.f87e5622.chunk.js.map",
+    "static/js/3.8d85e47e.chunk.js": "/pokestats/static/js/3.8d85e47e.chunk.js",
+    "static/js/3.8d85e47e.chunk.js.map": "/pokestats/static/js/3.8d85e47e.chunk.js.map",
+    "static/js/4.c97e7f88.chunk.js": "/pokestats/static/js/4.c97e7f88.chunk.js",
+    "static/js/4.c97e7f88.chunk.js.map": "/pokestats/static/js/4.c97e7f88.chunk.js.map",
     "index.html": "/pokestats/index.html",
-    "static/js/2.b571e677.chunk.js.LICENSE.txt": "/pokestats/static/js/2.b571e677.chunk.js.LICENSE.txt"
+    "static/js/2.f87e5622.chunk.js.LICENSE.txt": "/pokestats/static/js/2.f87e5622.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8eba34e8.js",
-    "static/js/2.b571e677.chunk.js",
-    "static/js/main.7eeecad9.chunk.js"
+    "static/js/runtime-main.d1d5a37c.js",
+    "static/js/2.f87e5622.chunk.js",
+    "static/js/main.e2d2119e.chunk.js"
   ]
 }
