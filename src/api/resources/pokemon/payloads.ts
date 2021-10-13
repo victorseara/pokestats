@@ -1,5 +1,18 @@
 import { PokemonType, StatName } from "./types";
 
+export interface GetPokemonStat {
+  base_stat: number;
+  stat: {
+    name: StatName;
+  };
+}
+
+export interface GetPokemonType {
+  type: {
+    name: PokemonType;
+  };
+}
+
 export interface GetPokemonResponse {
   name: string;
   sprites: {
@@ -9,19 +22,6 @@ export interface GetPokemonResponse {
       };
     };
   };
-  stats: [
-    {
-      base_stat: number;
-      stat: {
-        name: StatName;
-      };
-    }
-  ];
-  types: [
-    {
-      type: {
-        name: PokemonType;
-      };
-    }
-  ];
+  stats: GetPokemonStat[];
+  types: GetPokemonType[];
 }

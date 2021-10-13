@@ -8,7 +8,7 @@ const Loader = () => {
       alignItems="center"
       justifyContent="center"
     >
-      <CircularProgress />
+      <CircularProgress data-testid="circular-progress" />
     </Box>
   );
 };

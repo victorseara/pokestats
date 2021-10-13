@@ -44,8 +44,9 @@ const PokemonDisplay = ({ pokemon }: PokemonDisplayProps) => {
           {pokemon.stats.map((item) => (
             <StatDisplay
               key={item.name}
-              name={item.description}
+              name={item.name}
               value={item.value}
+              display={item.description}
             />
           ))}
         </Stack>

@@ -9,9 +9,10 @@ import React from "react";
 
 interface StatDisplayProps {
   name: string;
+  display: string;
   value: number;
 }
-const StatDisplay = ({ name, value }: StatDisplayProps) => {
+const StatDisplay = ({ name, value, display }: StatDisplayProps) => {
   const [state, setState] = React.useState(0);
 
   React.useEffect(() => {
@@ -33,10 +34,10 @@ const StatDisplay = ({ name, value }: StatDisplayProps) => {
   return (
     <Box>
       <Box display="flex" justifyContent="space-between" alignItems="baseline">
-        <StatText variant="overline">{name}</StatText>
+        <StatText variant="overline">{display}</StatText>
         <StatText variant="overline">{value}</StatText>
       </Box>
-      <StatBar value={state} variant="determinate" />
+      <StatBar value={state} variant="determinate" title={name} />
     </Box>
   );
 };

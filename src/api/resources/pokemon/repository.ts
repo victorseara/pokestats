@@ -11,7 +11,7 @@ class PokemonRepository {
       .then((response) => response.data)
       .catch((error: AxiosError) => {
         if (error.response?.status === 404) {
-          error.message = `There is no Pokemon called ${name}`;
+          error.message = `404: There is no Pokemon called ${name}`;
           throw error;
         }
 
