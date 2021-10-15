@@ -18,7 +18,7 @@ const StatDisplay = ({ name, value, display }: StatDisplayProps) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setState((prev) => {
-        if (prev < value && prev <= 100) {
+        if (prev < value && prev < 100) {
           return prev + 1;
         }
 
