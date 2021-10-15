@@ -1,5 +1,5 @@
 const PokemonAPI = {
-  baseUrl: process.env.REACT_APP_POKEMON_API,
+  baseUrl: "https://pokeapi.co/api/v2",
 };
 
 export default PokemonAPI;
