@@ -3,6 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+if (process.env.NODE_ENV === "development") {
+  const { worker } = require("./testUtils/msw/browser");
+  worker.start();
+  document.querySelector("body")?.classList.add("debug-screens");
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
