@@ -18,17 +18,23 @@ const StatDisplay = ({ name, value, display }: StatDisplayProps) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setState((prev) => {
-        if (prev < value && prev <= 100) {
-          return prev + 1;
+        if (prev === 100) {
+          clearInterval(timer);
+          return 100;
         }
 
-        return prev;
-      });
+        if (prev === value) {
+          clearInterval(timer);
+          return value;
+        }
 
-      return () => {
-        clearInterval(timer);
-      };
+        return prev + 1;
+      });
     }, 5);
+
+    return () => {
+      clearInterval(timer);
+    };
   }, [value]);
 
   return (
